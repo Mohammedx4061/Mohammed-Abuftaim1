@@ -34,18 +34,6 @@ class _TextFieldScreenState extends State<TextFieldScreen> {
   }
 
 
-  void _navigateToNextPage() {
-    String dataToSend = _controller1.text;
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-
-        builder: (context) => TwoPage(passedName: dataToSend),
-      ),
-    );
-  }
-
   @override
   void dispose() {
 
@@ -102,67 +90,7 @@ class _TextFieldScreenState extends State<TextFieldScreen> {
             const SizedBox(height: 20),
 
 
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                minimumSize: const Size(double.infinity, 50),
-              ),
-              onPressed: _navigateToNextPage,
-              child: const Text('Navigate'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
-// 2. الصفحة الثانية
-
-class TwoPage extends StatelessWidget {
-
-  final String passedName;
-
-
-  const TwoPage({
-    super.key,
-    required this.passedName,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Data Successfully received:',
-              style: TextStyle(fontSize: 25),
-            ),
-            const SizedBox(height: 20),
-
-            Text(
-              passedName,
-              style: const TextStyle(
-                fontSize: 38,
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
-              ),
-            ),
-            const SizedBox(height: 50),
-            ElevatedButton(
-              onPressed: () {
-
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                minimumSize: const Size(double.infinity, 60),
-              ),
-              child: const Text('Back'),
-            ),
           ],
         ),
       ),
