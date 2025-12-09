@@ -58,9 +58,7 @@ class AllGamesPage extends StatelessWidget {
 
       body: ListView(
         children: [
-          // -----------------------------
           // قسم الألعاب الرئيسية
-          // -----------------------------
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(
@@ -78,9 +76,7 @@ class AllGamesPage extends StatelessWidget {
 
           Divider(thickness: 2),
 
-          // -----------------------------
           // قسم ألعاب أخرى
-          // -----------------------------
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Text(

@@ -17,9 +17,7 @@ class CartPage extends StatelessWidget {
         child: Column(
           children: [
 
-            // ------------------------------
             //  عنصر اللعبة في السلة
-            // ------------------------------
             Container(
               padding: EdgeInsets.all(14),
               decoration: BoxDecoration(
@@ -68,9 +66,7 @@ class CartPage extends StatelessWidget {
 
             SizedBox(height: 40),
 
-            // ------------------------------
             // زر العودة للرئيسية
-            // ------------------------------
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
@@ -78,10 +74,8 @@ class CartPage extends StatelessWidget {
               ),
 
               onPressed: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => AllGamesPage()),
-                );
+                Navigator.of(context).push(MaterialPageRoute
+                  (builder: (context) => AllGamesPage()));
                     },
 
               child: Text(
